@@ -1,0 +1,79 @@
+/*
+	This is for base elements or general declarations
+	Page-specific classes should probably go in /pages, unless you have multiple page-specific classes on the body,
+	this is probably the place for them
+*/
+
+:root {
+  --app-height: 100vh;
+  --header-threshold: 0px;
+  // --header-padding: 37px
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+$min_width: 1440px;
+$max_width: 4320px;
+$min_font: 10px;
+$max_font: 16px;
+
+
+html {
+  font-size: 10px;
+
+  @include mq($from: wide) {
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  }
+}
+
+
+body {
+  min-height: 100%;
+  color: #191927;
+  width: 100%;
+  overflow-x: hidden;
+  @extend %text;
+
+}
+
+code {
+  padding: 1rem;
+  background: #444;
+  color: white;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  color: currentColor;
+}
+
+ul, ol {
+  padding-left: 0;
+  margin: 0;
+}
+
+img,
+picture {
+  width: 100%;
+}
+
+input[type=file]::-webkit-file-upload-button,
+input[type=file]::file-selector-button {
+    @apply text-white bg-primary hover:bg-primary-light font-medium text-md cursor-pointer border-0 rounded-md py-3 pl-8 pr-4;
+    margin-inline-start: -1rem;
+    margin-inline-end: 1rem;
+}
+
+

@@ -1,0 +1,122 @@
+.dropdown-recettes {
+  position: relative;
+  transition: all 1s ease-in;
+
+  .c-dropdown {
+    @include mq($from: $bp-desktop) {
+      display: none;
+    }
+  }
+  &:hover {
+    .c-dropdown {
+      display: flex;
+      transition: 300ms;
+
+      .menu-item-type-taxonomy {
+        color: $dark;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .c-dropdown {
+    @include mq($from: $bp-desktop) {
+      position: absolute;
+      top: 2.6rem;
+      left: -50%;
+      background-color: $white;
+      padding: 2.6rem;
+      width: 40rem;
+      border-radius: 2rem;
+      box-shadow: 3px 35px 30px rgb(35 67 88 / 5%);
+      transition: all 1s ease-in;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1.6rem;
+
+      @include mq($from: $bp-desktop) {
+        margin-top: 0;
+        @include flexbox(row, flex-start, flex-start);
+      }
+
+      li {
+        // margin-left: 0.8rem;
+        border-radius: 1rem;
+        transition: all 1s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+        font-size: 1.6rem !important;
+        background-color: $secondary_light;
+        color: $white;
+        margin: 0 1rem 1rem 0;
+
+        @include mq($from: $bp-desktop) {
+          background-color: transparent;
+          margin: 0.8rem;
+          padding: 0.8rem;
+        }
+
+        &.item {
+
+          &_usa {
+            a {
+              &:before {
+                content: "🇺🇸";
+                margin-right: $spacing-xxs;
+              }
+            }
+          }
+          &_thai {
+            a {
+              &:before {
+                content: "🇹🇭";
+                margin-right: $spacing-xxs;
+              }
+            }
+          }
+          &_france {
+            a {
+              &:before {
+                content: "🇫🇷";
+                margin-right: $spacing-xxs;
+              }
+            }
+          }
+          &_spain {
+            a {
+              &:before {
+                content: "🇪🇸";
+                margin-right: $spacing-xxs;
+              }
+            }
+          }
+          &_italy {
+            a {
+              &:before {
+                content: "🇮🇹";
+                margin-right: $spacing-xxs;
+              }
+            }
+          }
+          &_mexico {
+            a {
+              &:before {
+                content: "🇲🇽";
+                margin-right: $spacing-xxs;
+              }
+            }
+          }
+        }
+        &:hover {
+          background-color: $secondary_light;
+          transition: all 1s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

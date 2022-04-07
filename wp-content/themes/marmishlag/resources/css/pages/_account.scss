@@ -1,0 +1,22 @@
+.page-template {
+  &-template-create_recipe,
+  &-template-account,
+  &-template-my_recipes {
+    .sidebar {
+      &__link {
+        padding: 0.4rem 0;
+        font-size: 1.6rem;
+        font-weight: 400;
+        &.is-active {
+          span {
+            &:not(:first-child) {
+              color: $secondary;
+              font-weight: 600;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

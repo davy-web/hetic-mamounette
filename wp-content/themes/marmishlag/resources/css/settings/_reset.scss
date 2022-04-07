@@ -1,0 +1,50 @@
+%resetmargin {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+// ul.list
+.list, dl, dd, dt{
+	@extend %resetmargin;
+}
+
+a,
+ins {
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+textarea,
+select,
+input {
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}
+
+iframe,
+video,
+img {
+    max-width: 100%;
+    display: block;
+}
+
+figure{
+    @extend %resetmargin
+}
+
+button,
+input[type="submit"]{
+    
+}

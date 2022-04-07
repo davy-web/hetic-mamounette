@@ -1,0 +1,57 @@
+
+
+@mixin bp($point) {
+
+  // Large
+  $media: '(min-width: #{$screen-lg-min})';
+
+  @if $point == lg {
+    // Large
+    $media: '(min-width: #{$screen-lg-min})';
+  }
+  @else if $point == md {
+    // Medium
+    $media: '(min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max})';
+  }
+  @else if $point == sm {
+    // Tablet
+    $media: '(min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max})';
+  }
+  @else if $point == xs {
+    // Mobile
+    $media: '(max-width: #{$screen-xs-max})';
+  }
+  @else if $point == max-xs {
+    // Mobile
+    $media: '(max-width: #{$screen-xs-max})';
+  }
+  @else if $point == min-md {
+    // Large & Medium
+    $media: '(min-width: #{$screen-md-min})';
+  }
+  @else if $point == min-sm {
+    // Large & Medium & Tablet
+    $media: '(min-width: #{$screen-sm-min})';
+  }
+  @else if $point == max-md {
+    // Medium & Tablet & mobile
+    $media: '(max-width: #{$screen-md-max})';
+  }
+  @else if $point == md-sm {
+    // Medium & Tablet
+    $media: '(min-width: #{$screen-sm-min}) and (max-width: #{$screen-md-max})';
+  }
+  @else if $point == max-sm {
+    // Tablet & mobile
+    $media: '(max-width: #{$screen-sm-max})';
+  }
+  @else if $point == min-sm {
+    // Tablet & mobile
+    $media: '(min-width: 0px)';
+  }
+
+  @else if $point == lg-md {
+    $media: '(max-width: 1470px)';
+  }
+  @media #{$media} { @content; }
+}

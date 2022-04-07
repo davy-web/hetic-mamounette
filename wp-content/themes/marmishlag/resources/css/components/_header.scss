@@ -1,0 +1,16 @@
+#header {
+  &__center {
+    .current_page_item {
+      color: $secondary;
+    }
+
+    .menu-item {
+      padding: 0.8rem;
+      font-size: 1.8rem;
+
+      @include mq($from: $bp-desktop) {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

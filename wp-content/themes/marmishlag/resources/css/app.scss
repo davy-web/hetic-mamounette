@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "custom.scss";
+
+
+// SETTINGS
+@import "./settings/fonts";
+@import "./settings/variables";
+@import "./settings/normalize";
+@import "./settings/placeholders";
+@import "./settings/helpers";
+@import "./settings/reset";
+
+//MIXINS
+@import "./settings/mixins/_mq";
+@import "./settings/mixins/breakpoints";
+@import "./settings/mixins/fluid-typo";
+@import "./settings/mixins/flex";
+
+// BASE
+@import "./base/base";
+
+// THEME
+@import "./theme/_typography";
+
+// COMPONENTS
+@import "./components/_dropdown";
+@import "./components/_header";
+@import "./components/_comments";
+
+//LAYOUTS
+@import "./layouts/login.scss";
+// PAGE
+@import "./pages/_search";
+@import "./pages/_account";
+  
+.s-like-badge {
+  input {
+    + div {
+      background-color: $white;
+    }
+
+    &:checked {
+      + div {
+        background-color: $secondary;
+        
+        svg {
+          path {
+            stroke: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// input:checked + label {
+//   background-color: aquamarine;
+// }
+

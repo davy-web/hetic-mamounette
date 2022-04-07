@@ -1,0 +1,53 @@
+/*
+
+    Common placeholders, used in typography,
+    hover effects.
+
+ */
+
+// ==================== Typography ====================
+
+
+%title {
+  font-family: $pacifico;
+  font-size: 1.6rem;
+
+  &--lg {
+    font-family: $pacifico;
+    font-size: 3.2rem;
+  }
+  &--xl {
+    font-family: $pacifico;
+    font-size: 4rem;
+  }
+}
+
+%text {
+  font-family: $quicksand;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.4;
+
+  &--xs {
+    font-family: $quicksand;
+    font-size: 0.9rem;
+    line-height: 1.1;
+  }
+  &--md {
+    font-family: $quicksand;
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+  &--lg {
+    font-family: $quicksand;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  &--xl {
+    font-family: $quicksand;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+}

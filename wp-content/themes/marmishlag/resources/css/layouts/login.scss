@@ -1,0 +1,76 @@
+.signin-active a {
+  padding-bottom: 10px;
+  text-decoration: none;
+  border-bottom: solid 2px #1059ff;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.signin-inactive a {
+  padding-bottom: 0;
+  color: #c9bdbb;
+  opacity: 0.6;
+  text-decoration: none;
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.signup-active a {
+  padding-bottom: 10px;
+  text-decoration: none;
+  color: #312e81 !important;
+  border-bottom: solid 2px #1059ff;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.signup-inactive a {
+  cursor: pointer;
+  color: #c9bdbb;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.form__section {
+  margin-top: 130px;
+}
+.form-signin {
+  // width: 430px;
+  height: 375px;
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 37px;
+  padding-right: 37px;
+  padding-top: 55px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.form-signin-left {
+  transform: translateX(-400px);
+  opacity: 0;
+}
+
+.form-signup {
+  // width: 430px;
+  height: 375px;
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 37px;
+  padding-right: 37px;
+  padding-top: 55px;
+  position: relative;
+  top: -375px;
+  left: 400px;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.form-signup-left {
+  transform: translateX(-399px);
+  opacity: 1;
+}
+
+.form-signup-down {
+  top: 0px;
+  opacity: 0;
+}
